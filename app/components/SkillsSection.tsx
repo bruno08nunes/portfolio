@@ -49,9 +49,9 @@ export default function SkillsSection() {
                     </button>
                 ))}
             </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] py-3 gap-4">
+            <div className="flex flex-wrap py-3 gap-4">
                 {currentSkills?.skills.map((value, i) => (
-                    <span className="border-[#5E17EB] border-2 text-[1.1em] py-1 px-3 text-center" key={i}>
+                    <span className="border-white border-2 text-[1.7em] p-10 text-center" key={i}>
                         {value}
                     </span>
                 ))}

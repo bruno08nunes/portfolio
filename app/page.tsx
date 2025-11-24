@@ -46,8 +46,22 @@ export default function Home() {
                     </Link>
                 </nav>
                 <div className="flex justify-end gap-4">
-                    <span>M</span>
-                    <span>BR</span>
+                    <button className="cursor-pointer">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="lucide lucide-moon-icon lucide-moon"
+                        >
+                            <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                        </svg>
+                    </button>
                 </div>
             </header>
             <main className="min-w-[320px] w-full mx-auto flex flex-col text-xl py-8">
@@ -93,7 +107,7 @@ export default function Home() {
                                 key={i}
                             >
                                 <Image
-                                    src="https://avatars.githubusercontent.com/u/139359503?v=4"
+                                    src={`/${project.name.toLowerCase()}.png`}
                                     alt=""
                                     width={200}
                                     height={200}
@@ -135,9 +149,7 @@ export default function Home() {
                             <p>
                                 Eu sou Bruno Nunes, um desenvolvedor full-stack
                                 em início de carreira e game developer em
-                                formação. Atualmente tenho $
-                                {new Date().getFullYear() - 2008} anos de idade.
-                                Sou apaixonado por transformar simples ideias em
+                                formação. Sou apaixonado por transformar simples ideias em
                                 experiências digitais, desde aplicações web até
                                 mundos jogáveis.
                             </p>
