@@ -1,0 +1,61 @@
+"use client";
+
+import { useState } from "react";
+
+const skillsCategories = ["Frontend", "Backend", "Game Dev"];
+const skills = [
+    {
+        category: "Frontend",
+        skills: [
+            "HTML/CSS",
+            "JavaScript",
+            "TypeScript",
+            "Next.js",
+            "React",
+            "Tailwind",
+        ],
+    },
+    {
+        category: "Backend",
+        skills: ["TypeScript", "Node.js", "Express", "MySQL"],
+    },
+    {
+        category: "Game Dev",
+        skills: ["C#", "Unity"],
+    },
+];
+
+export default function SkillsSection() {
+    const [currentSkillCategory, setCurrentSkillCategory] = useState(0);
+    const currentSkills = skills.find(
+        (value) => value.category === skillsCategories[currentSkillCategory]
+    );
+
+    return (
+        <section className="max-w-[1300px] mx-auto w-full py-15">
+            <h2 className="text-[1.5em] text-balance font-bold mb-2">
+                Habilidades
+            </h2>
+            <div className="flex gap-4 text-[1.2em]">
+                {skillsCategories.map((value, i) => (
+                    <button
+                        className={`cursor-pointer hover:border-b-3 px-2 border-[#5E17EB] ${
+                            currentSkillCategory === i ? "border-b-3" : ""
+                        }`}
+                        key={i}
+                        onClick={() => setCurrentSkillCategory(i)}
+                    >
+                        {value}
+                    </button>
+                ))}
+            </div>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] py-3 gap-4">
+                {currentSkills?.skills.map((value, i) => (
+                    <span className="border-[#5E17EB] border-2 text-[1.1em] py-1 px-3 text-center" key={i}>
+                        {value}
+                    </span>
+                ))}
+            </div>
+        </section>
+    );
+}

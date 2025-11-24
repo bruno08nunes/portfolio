@@ -1,5 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import SkillsSection from "./components/SkillsSection";
+
+const projects = [
+    {
+        name: "Minerva",
+        description:
+            "Aplicação para ensino de lógica e programação de maneira gamificada, com um sistema de lições, progresso de usuário e desafios interativos.",
+        tools: ["TypeScript", "Next.js", "Tailwind", "Prisma", "Express"],
+    },
+    {
+        name: "Loja-Loja",
+        description:
+            "Loja virtual com catálogo de produtos e autenticação salvos no banco de dados e  um carrinho de compras salvo no computador do usuário.",
+        tools: ["HTML/CSS", "JavaScript", "MySQL", "Express"],
+    },
+    {
+        name: "Pokemon",
+        description:
+            "Jogo no qual o usuário precisa adivinhar qual Pokémon é pela sua silhueta.",
+        tools: ["HTML/CSS", "JavaScript", "Poke API"],
+    },
+];
 
 export default function Home() {
     return (
@@ -7,15 +29,21 @@ export default function Home() {
             <header className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-2xl items-center">
                 <h1>Bruno Nunes</h1>
                 <nav className="justify-center flex gap-2">
-                    <a href="#" className="border-b-2 border-[#5E17EB] p-1">
-                        Teste
-                    </a>
-                    <a href="#" className="border-b-2 border-[#5E17EB] p-1">
-                        Teste
-                    </a>
-                    <a href="#" className="border-b-2 border-[#5E17EB] p-1">
-                        Teste
-                    </a>
+                    <Link href="/" className="border-b-2 border-[#5E17EB] p-1">
+                        Home
+                    </Link>
+                    <Link
+                        href="/projetos"
+                        className="border-b-2 border-[#5E17EB] p-1"
+                    >
+                        Projetos
+                    </Link>
+                    <Link
+                        href="/sobre-mim"
+                        className="border-b-2 border-[#5E17EB] p-1"
+                    >
+                        Sobre Mim
+                    </Link>
                 </nav>
                 <div className="flex justify-end gap-4">
                     <span>M</span>
@@ -59,7 +87,7 @@ export default function Home() {
                         Projetos
                     </h2>
                     <div className="flex justify-center flex-wrap gap-12">
-                        {[0, 0, 0].map((_, i) => (
+                        {projects.map((project, i) => (
                             <div
                                 className="flex-1 max-w-[400px] border-[#5E17EB] rounded-md border-4 overflow-hidden hover:translate-y-[-19px] transition-all cursor-pointer basis-[280px]"
                                 key={i}
@@ -73,26 +101,18 @@ export default function Home() {
                                 />
                                 <div className="p-3 flex flex-col gap-2 text-justify">
                                     <h3 className="text-shadow-[3px_3px_#5E17EB] text-[1.3em]">
-                                        Minerva
+                                        {project.name}
                                     </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Illum ducimus aliquam
-                                        iusto maxime non, soluta tenetur fugiat
-                                        repellat eligendi. Molestiae quasi
-                                        tempore commodi fugiat ex rem
-                                        necessitatibus sequi hic nisi!
-                                    </p>
+                                    <p> {project.description}</p>
                                     <div className="flex flex-wrap gap-4 text-sm">
-                                        <span className="py-1 px-4 rounded-4xl border border-white">
-                                            HTML
-                                        </span>
-                                        <span className="py-1 px-4 rounded-4xl border border-white">
-                                            CSS
-                                        </span>
-                                        <span className="py-1 px-4 rounded-4xl border border-white">
-                                            JavaScript
-                                        </span>
+                                        {project.tools.map((tool, i) => (
+                                            <span
+                                                className="py-1 px-4 rounded-4xl border border-white"
+                                                key={i}
+                                            >
+                                                {tool}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -105,33 +125,7 @@ export default function Home() {
                         Ver Todos Os Projetos
                     </Link>
                 </section>
-                <section className="max-w-[1300px] mx-auto w-full">
-                    <h2 className="text-[1.5em] text-balance font-bold mb-2">
-                        Habilidades
-                    </h2>
-                    <div className="flex gap-4 text-[1.2em]">
-                        <button className="cursor-pointer hover:border-b-3 border-[#5E17EB] border-b-3">
-                            Frontend
-                        </button>
-                        <button className="cursor-pointer hover:border-b-3 border-[#5E17EB]">
-                            Backend
-                        </button>
-                        <button className="cursor-pointer hover:border-b-3 border-[#5E17EB]">
-                            Game Dev
-                        </button>
-                    </div>
-                    <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] py-3 gap-4">
-                        <span className="border-[#5E17EB] border-2 text-[1.1em] py-1 px-3 text-center">
-                            HTML
-                        </span>
-                        <span className="border-[#5E17EB] border-2 text-[1.1em] py-1 px-3 text-center">
-                            HTML
-                        </span>
-                        <span className="border-[#5E17EB] border-2 text-[1.1em] py-1 px-3 text-center">
-                            HTML
-                        </span>
-                    </div>
-                </section>
+                <SkillsSection />
                 <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8">
                     <div className="max-w-[1300px] text-2xl flex gap-8 items-center">
                         <div className="flex flex-col gap-4 text-justify">
@@ -176,11 +170,50 @@ export default function Home() {
             </main>
             <footer className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-2xl items-center">
                 <div className="mx-auto">
-                    <h2 className="text-[1.5em] text-balance font-bold mb-2">Contato</h2>
+                    <h2 className="text-[1.5em] text-balance font-bold mb-2">
+                        Contato
+                    </h2>
                     <ul>
-                        <li>Email</li>
-                        <li>Email</li>
-                        <li>Email</li>
+                        <li>
+                            Email:{" "}
+                            <a
+                                href="mailto:brunonunes.sl08@gmail.com"
+                                target="_blank"
+                                className="underline hover:no-underline"
+                            >
+                                brunonunes.sl08@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            Linkedin:{" "}
+                            <a
+                                href="https://www.linkedin.com/in/bruno08nunes/"
+                                target="_blank"
+                                className="underline hover:no-underline"
+                            >
+                                bruno08nunes
+                            </a>
+                        </li>
+                        <li>
+                            Github:{" "}
+                            <a
+                                href="https://github.com/bruno08nunes"
+                                target="_blank"
+                                className="underline hover:no-underline"
+                            >
+                                bruno08nunes
+                            </a>
+                        </li>
+                        <li>
+                            Itch.io:{" "}
+                            <a
+                                href="https://bruno08nunes.itch.io/"
+                                target="_blank"
+                                className="underline hover:no-underline"
+                            >
+                                bruno08nunes
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </footer>
