@@ -65,7 +65,7 @@ export default function Home() {
                 </div>
             </header>
             <main className="min-w-[320px] w-full mx-auto flex flex-col text-xl py-8">
-                <section className="grid grid-cols-[3fr_2fr] w-full items-center gap-10 min-h-[55svh] max-w-[1300px] mx-auto">
+                <section className="grid grid-cols-[3fr_2fr] w-full items-center gap-10 min-h-[55svh] max-w-[1300px] mx-auto px-6">
                     <div className="flex flex-col gap-4">
                         <h2 className="text-[1.8em] text-balance font-bold">
                             Transformando ideias e construindo experiências
@@ -96,7 +96,7 @@ export default function Home() {
                         className="max-w-full w-[70%] rounded-full object-cover"
                     />
                 </section>
-                <section className="max-w-[1300px] mx-auto w-full">
+                <section className="max-w-[1300px] mx-auto w-full px-6">
                     <h2 className="text-[1.5em] text-balance font-bold mb-2">
                         Projetos
                     </h2>
@@ -180,7 +180,7 @@ export default function Home() {
                     </div>
                 </section>
             </main>
-            <footer className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-2xl items-center">
+            <footer className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-2xl items-center px-6">
                 <div className="mx-auto">
                     <h2 className="text-[1.5em] text-balance font-bold mb-2">
                         Contato

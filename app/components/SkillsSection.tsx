@@ -32,7 +32,7 @@ export default function SkillsSection() {
     );
 
     return (
-        <section className="max-w-[1300px] mx-auto w-full py-15">
+        <section className="max-w-[1300px] mx-auto w-full py-15 px-6">
             <h2 className="text-[1.5em] text-balance font-bold mb-2">
                 Habilidades
             </h2>
