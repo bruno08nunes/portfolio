@@ -65,7 +65,7 @@ export default function Home() {
                 </div>
             </header>
             <main className="min-w-[320px] w-full mx-auto flex flex-col text-xl py-8">
-                <section className="grid grid-cols-[3fr_2fr] w-full items-center gap-10 min-h-[55svh] max-w-[1300px] mx-auto px-6">
+                <section className="grid grid-cols-[3fr_2fr] w-full items-center gap-10 min-h-[55svh] max-w-[1300px] mx-auto px-6 py-15">
                     <div className="flex flex-col gap-4">
                         <h2 className="text-[1.8em] text-balance font-bold">
                             Transformando ideias e construindo experiências
@@ -91,8 +91,8 @@ export default function Home() {
                     <Image
                         src="https://avatars.githubusercontent.com/u/139359503?v=4"
                         alt=""
-                        width={200}
-                        height={200}
+                        width={500}
+                        height={500}
                         className="max-w-full w-[70%] rounded-full object-cover"
                     />
                 </section>
@@ -109,8 +109,8 @@ export default function Home() {
                                 <Image
                                     src={`/${project.name.toLowerCase()}.png`}
                                     alt=""
-                                    width={200}
-                                    height={200}
+                                    width={800}
+                                    height={800}
                                     className="w-full object-cover aspect-video"
                                 />
                                 <div className="p-3 flex flex-col gap-2 text-justify">
