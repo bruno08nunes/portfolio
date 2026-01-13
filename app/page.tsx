@@ -29,18 +29,18 @@ export default function Home() {
             <header className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-2xl items-center">
                 <h1>Bruno Nunes</h1>
                 <nav className="justify-center flex gap-2">
-                    <Link href="/" className="border-b-2 border-[#5E17EB] p-1">
+                    <Link href="/" className="border-b-2 border-[#5E17EB] p-1 hover:px-4 transition-all duration-400">
                         Home
                     </Link>
                     <Link
                         href="/projetos"
-                        className="border-b-2 border-[#5E17EB] p-1"
+                        className="border-b-2 border-[#5E17EB] p-1 hover:px-4 transition-all duration-400"
                     >
                         Projetos
                     </Link>
                     <Link
                         href="/sobre-mim"
-                        className="border-b-2 border-[#5E17EB] p-1"
+                        className="border-b-2 border-[#5E17EB] p-1 hover:px-4 transition-all duration-400"
                     >
                         Sobre Mim
                     </Link>
@@ -103,7 +103,7 @@ export default function Home() {
                     <div className="flex justify-center flex-wrap gap-12">
                         {projects.map((project, i) => (
                             <div
-                                className="flex-1 max-w-[400px] border-[#5E17EB] rounded-md border-4 overflow-hidden hover:translate-y-[-19px] transition-all cursor-pointer basis-[280px]"
+                                className="flex-1 max-w-[400px] border-[#5E17EB] rounded-md border-4 overflow-hidden hover:scale-105 hover:translate-y-[-19px] transition-all duration-400 cursor-pointer basis-[280px]"
                                 key={i}
                             >
                                 <Image
@@ -117,11 +117,11 @@ export default function Home() {
                                     <h3 className="text-shadow-[3px_3px_#5E17EB] text-[1.3em]">
                                         {project.name}
                                     </h3>
-                                    <p> {project.description}</p>
+                                    <p className="text-[0.9em]"> {project.description}</p>
                                     <div className="flex flex-wrap gap-4 text-sm">
                                         {project.tools.map((tool, i) => (
                                             <span
-                                                className="py-1 px-4 rounded-4xl border border-white"
+                                                className="py-1 px-4 rounded-4xl border border-white text-[0.9em]"
                                                 key={i}
                                             >
                                                 {tool}
@@ -134,14 +134,14 @@ export default function Home() {
                     </div>
                     <Link
                         href="/projetos"
-                        className="mx-auto mt-4 block w-max border-2 py-1 px-3 rounded-3xl text-2xl hover:scale-110 transition-all shadow-[0px_3px_10px_#5E17EB] hover:shadow-[0px_8px_17px_#5E17EB]"
+                        className="mx-auto mt-4 block w-max border-2 py-1 px-3 rounded-3xl text-xl hover:px-8 transition-all shadow-[0px_3px_10px_#5E17EB] hover:shadow-[0px_8px_17px_#5E17EB] duration-400"
                     >
                         Ver Todos Os Projetos
                     </Link>
                 </section>
                 <SkillsSection />
                 <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8">
-                    <div className="max-w-[1300px] text-2xl flex gap-8 items-center">
+                    <div className="max-w-[1300px] text-xl flex gap-8 items-center">
                         <div className="flex flex-col gap-4 text-justify">
                             <h2 className="text-[1.5em] text-balance font-bold mb-2">
                                 Sobre Mim
@@ -165,7 +165,7 @@ export default function Home() {
                             </p>
                             <Link
                                 href="/sobre-mim"
-                                className="mx-auto mt-4 block w-max border-2 py-1 px-3 rounded-3xl text-2xl hover:scale-110 transition-all shadow-[0px_3px_10px_#5E17EB] hover:shadow-[0px_8px_17px_#5E17EB]"
+                                className="mx-auto mt-4 block w-max border-2 py-1 px-4 rounded-3xl text-xl hover:px-10 transition-all shadow-[0px_3px_10px_#5E17EB] hover:shadow-[0px_8px_17px_#5E17EB] duration-400"
                             >
                                 Veja mais
                             </Link>
@@ -180,7 +180,7 @@ export default function Home() {
                     </div>
                 </section>
             </main>
-            <footer className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-2xl items-center px-6">
+            <footer className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-xl items-center px-6">
                 <div className="mx-auto">
                     <h2 className="text-[1.5em] text-balance font-bold mb-2">
                         Contato
