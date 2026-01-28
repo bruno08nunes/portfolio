@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ProjectTrigger({ project, handleOpenModal }: { project: ProjectType, handleOpenModal(project: ProjectType): void }) {
     return (
         <div
-            className="flex-1 max-w-[400px] border-[#5E17EB] rounded-md border-4 overflow-hidden hover:scale-105 hover:translate-y-[-19px] transition-all duration-400 cursor-pointer basis-[280px]"
+            className="flex-1 max-w-[400px] border-[#5E17EB] rounded-md border-4 overflow-hidden hover:scale-105 hover:translate-y-[-19px] transition-all duration-400 cursor-pointer basis-[280px] bg-[#131315]"
             onClick={() => handleOpenModal(project)}
         >
             <Image
