@@ -29,7 +29,7 @@ export default function Projects({
             ))}
 
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent className="bg-[#131315] border-[#5E17EB]">
+                <DialogContent className="bg-[#131315] border-[#5E17EB] border-3 max-w-[650px]">
                     <DialogHeader>
                         <DialogTitle className="mx-auto py-1 px-4 bg-[#5E17EB] text-2xl font-bold w-max rounded-sm">{selectedProject?.name}</DialogTitle>
                         <DialogDescription>
@@ -48,7 +48,7 @@ export default function Projects({
                         <h2 className="text-xl font-bold mb-2">Links</h2>
                         {
                             selectedProject?.links.map((link, i) => (
-                                <a href={link.href} target="_blank" key={i} className="py-1 px-4 bg-[#5E17EB] text-lg rounded-sm hover:underline">{link.title}</a>
+                                <a href={link.href} target="_blank" key={i} className="py-1 px-4 bg-[#5E17EB] text-lg rounded-sm hover:underline mr-3">{link.title}</a>
                             ))
                         }
                     </div>

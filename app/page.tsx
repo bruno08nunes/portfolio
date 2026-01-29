@@ -3,33 +3,8 @@ import Link from "next/link";
 import SkillsSection from "../components/SkillsSection";
 import Projects from "@/components/project/Projects";
 import Header from "@/components/Header";
-
-const projects = [
-    {
-        name: "Minerva",
-        description:
-            "Aplicação para ensino de lógica e programação de maneira gamificada, com um sistema de lições, progresso de usuário e desafios interativos.",
-        tools: ["TypeScript", "Next.js", "Tailwind", "Prisma", "Express"],
-        text: ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore."],
-        links: [{href: "https://github.com/bruno08nunes/minerva-frontend", title: "Github"}]
-    },
-    {
-        name: "Loja-Loja",
-        description:
-            "Loja virtual com catálogo de produtos e autenticação salvos no banco de dados e  um carrinho de compras salvo no computador do usuário.",
-        tools: ["HTML/CSS", "JavaScript", "MySQL", "Express"],
-        text: ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore."],
-        links: [{href: "https://github.com/bruno08nunes/minerva-frontend", title: "Github"}]
-    },
-    {
-        name: "Pokemon",
-        description:
-            "Jogo no qual o usuário precisa adivinhar qual Pokémon é pela sua silhueta.",
-        tools: ["HTML/CSS", "JavaScript", "Poke API"],
-        text: ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore.", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam libero velit fugiat harum voluptates iusto nihil! Eos nostrum beatae provident deleniti quisquam, perferendis ipsam officiis temporibus illo. Itaque, magni labore."],
-        links: [{href: "https://github.com/bruno08nunes/minerva-frontend", title: "Github"}]
-    },
-];
+import { projects } from "@/data/projects";
+import profileImage from "@/public/purple-picture.jpeg"
 
 export default function Home() {
     return (
@@ -60,11 +35,11 @@ export default function Home() {
                         </p>
                     </div>
                     <Image
-                        src="https://avatars.githubusercontent.com/u/139359503?v=4"
-                        alt=""
-                        width={500}
-                        height={500}
+                        src={profileImage}
+                        alt="Ilustração estilizada representando o autor do portfólio, com óculos e barba rala, em estilo cartoon, sobre fundo roxo."
                         className="max-w-full w-[70%] rounded-full object-cover"
+                        loading="eager"
+                        placeholder="blur"
                     />
                 </section>
                 <section className="max-w-[1300px] mx-auto w-full px-6">
