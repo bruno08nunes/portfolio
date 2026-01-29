@@ -4,7 +4,32 @@ import SkillsSection from "../components/SkillsSection";
 import Projects from "@/components/project/Projects";
 import Header from "@/components/Header";
 import { projects } from "@/data/projects";
-import profileImage from "@/public/purple-picture.jpeg"
+import profileImage from "@/public/purple-picture.jpeg";
+
+const education = [
+    {
+        course: "Ensino Técnico em Informática para Web",
+        institution: "Senac RS",
+        period: "Fev 2023 - Dez 2025",
+        additionalInfo: "Formação técnica integrada ao Ensino Médio",
+        description: [
+            "Curso com foco no desenvolvimento de aplicações web e na construção de uma base sólida em programação e tecnologia.",
+            "Aborda o desenvolvimento de sites e aplicações web utilizando HTML, CSS e JavaScript, incluindo conceitos de design responsivo, boas práticas de estruturação e acessibilidade.",
+            "Inclui lógica de programação, desenvolvimento backend com Node.js e Express, modelagem e uso de bancos de dados relacionais (MySQL), além de versionamento de código com Git e GitHub.",
+        ],
+    },
+    {
+        course: "Tecnólogo em Jogos Digitais",
+        institution: "Unisinos — Campus São Leopoldo",
+        period: "2026 - 2029",
+        additionalInfo: "Curso superior tecnólogo na área de jogos digitais",
+        description: [
+            "Formação voltada ao desenvolvimento de jogos digitais, abrangendo tanto aspectos técnicos quanto criativos da área.",
+            "Inclui fundamentos de programação para jogos, desenvolvimento de jogos 2D e 3D, uso de motores de jogo, além de conceitos de matemática, física e inteligência artificial aplicados a jogos.",
+            "Aborda também game design, narrativa, experiência do usuário, produção de assets, trabalho em equipe multidisciplinar e práticas do mercado de jogos digitais.",
+        ],
+    },
+];
 
 export default function Home() {
     return (
@@ -64,9 +89,9 @@ export default function Home() {
                             <p>
                                 Eu sou Bruno Nunes, um desenvolvedor full-stack
                                 em início de carreira e game developer em
-                                formação. Sou apaixonado por transformar simples ideias em
-                                experiências digitais, desde aplicações web até
-                                mundos jogáveis.
+                                formação. Sou apaixonado por transformar simples
+                                ideias em experiências digitais, desde
+                                aplicações web até mundos jogáveis.
                             </p>
                             <p>
                                 Atualmente, meu foco maior está em TypeScript,
@@ -93,6 +118,28 @@ export default function Home() {
                             className="max-w-full w-[20%] rounded-full object-cover"
                         />
                     </div>
+                </section>
+                <section className="max-w-[1300px] mx-auto w-full px-6 py-8">
+                    <h2 className="text-[1.5em] text-balance font-bold mb-2">
+                        Formação
+                    </h2>
+                    <dl className="flex flex-col gap-6">
+                    {
+                        education.map((course, i) => (
+                            <div key={i} className="flex flex-col gap-2">
+                                <dt className="flex gap-4">
+                                    <span className="font-bold">{course.course}</span>
+                                    <span className="italic">{course.institution} - {course.period}</span>
+                                </dt>
+                                <dd className="flex flex-col gap-1 pl-7">
+                                    {course.description.map((description, i) => (
+                                        <p key={i}>{description}</p>
+                                    ))}
+                                </dd>
+                            </div>
+                        ))
+                    }
+                    </dl>
                 </section>
             </main>
             <footer className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-xl items-center px-6">
