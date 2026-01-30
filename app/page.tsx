@@ -5,6 +5,7 @@ import Projects from "@/components/project/Projects";
 import Header from "@/components/Header";
 import { projects } from "@/data/projects";
 import profileImage from "@/public/purple-picture.jpeg";
+import Footer from "@/components/Footer";
 
 const education = [
     {
@@ -52,7 +53,7 @@ export default function Home() {
                             </span>
                             , um desenvolvedor <b>Full-Stack</b> em início de
                             carreira com formação técnica pelo SENAC e{" "}
-                            <b>Game Developer</b> em formação. Trabalho com foco
+                            <b>Game Developer</b> em formação pela Unisinos. Trabalho com foco
                             em <b>TypeScript</b>, <b>Next.js</b>, <b>Express</b>{" "}
                             para o desenvolvimento Web, além de <b>Unity</b>{" "}
                             para a criação de jogos. Meu objetivo é transformar
@@ -142,55 +143,7 @@ export default function Home() {
                     </dl>
                 </section>
             </main>
-            <footer className="text-white bg-[#1a1a1a] p-4 grid grid-cols-3 text-xl items-center px-6">
-                <div className="mx-auto">
-                    <h2 className="text-[1.5em] text-balance font-bold mb-2">
-                        Contato
-                    </h2>
-                    <ul>
-                        <li>
-                            Email:{" "}
-                            <a
-                                href="mailto:brunonunes.sl08@gmail.com"
-                                target="_blank"
-                                className="underline hover:no-underline"
-                            >
-                                brunonunes.sl08@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            Linkedin:{" "}
-                            <a
-                                href="https://www.linkedin.com/in/bruno08nunes/"
-                                target="_blank"
-                                className="underline hover:no-underline"
-                            >
-                                bruno08nunes
-                            </a>
-                        </li>
-                        <li>
-                            Github:{" "}
-                            <a
-                                href="https://github.com/bruno08nunes"
-                                target="_blank"
-                                className="underline hover:no-underline"
-                            >
-                                bruno08nunes
-                            </a>
-                        </li>
-                        <li>
-                            Itch.io:{" "}
-                            <a
-                                href="https://bruno08nunes.itch.io/"
-                                target="_blank"
-                                className="underline hover:no-underline"
-                            >
-                                bruno08nunes
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+            <Footer />
         </>
     );
 }

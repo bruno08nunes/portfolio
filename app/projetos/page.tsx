@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import GithubProjects from "@/components/project/GithubProjects";
 import Projects from "@/components/project/Projects";
@@ -45,6 +46,7 @@ export default async function ProjectsPage({
                     </section>
                 )}
             </main>
+            <Footer />
         </>
     );
 }
