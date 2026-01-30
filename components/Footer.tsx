@@ -46,6 +46,7 @@ export default function Footer() {
                             bruno08nunes
                         </a>
                     </li>
+                    <li>Currículo: <a href="/curriculo.pdf" download="curriculo-bruno-nunes" className="underline hover:no-underline">Bruno Nunes</a></li>
                 </ul>
             </div>
         </footer>
