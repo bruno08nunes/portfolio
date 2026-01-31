@@ -3,7 +3,11 @@ import Header from "@/components/Header";
 import GithubProjects from "@/components/project/GithubProjects";
 import Projects from "@/components/project/Projects";
 import { projects } from "@/data/projects";
-import { generatePaginationValues, getLastPage, getRepos } from "@/lib/github-fetch";
+import {
+    generatePaginationValues,
+    getLastPage,
+    getRepos,
+} from "@/lib/github-fetch";
 import Link from "next/link";
 
 export default async function ProjectsPage({
@@ -31,16 +35,31 @@ export default async function ProjectsPage({
                 </section>
                 {okReq !== false && repos !== undefined && (
                     <section className="max-w-[1300px] mx-auto w-full px-6">
-                        <h2 className="text-[1.5em] text-balance font-bold mb-2">
+                        <h2 className="text-[1.5em] text-balance font-bold mb-2" id="github-projects-h2">
                             Todos os Repositórios do Github
                         </h2>
                         <GithubProjects projects={repos} />
                         <div className="flex gap-3 justify-center mt-6">
                             {linkValues.map((value, i) => {
                                 if (typeof value === "string") {
-                                    return <div className="border p-2 size-10 flex items-center justify-center" key={i}>...</div>
+                                    return (
+                                        <div
+                                            className="border p-2 size-10 flex items-center justify-center"
+                                            key={i}
+                                        >
+                                            ...
+                                        </div>
+                                    );
                                 }
-                                return <Link href={`?page=${value}`} scroll={false} key={i} className="border p-2 size-10 flex items-center justify-center">{value}</Link>
+                                return (
+                                    <Link
+                                        href={`?page=${value}#github-projects-h2`}
+                                        key={i}
+                                        className={"border p-2 size-10 flex items-center justify-center hover:translate-y-1.5 transition-all " + (currentPage === value ? "text-black bg-[#ffffffe0]" : "")}
+                                    >
+                                        {value}
+                                    </Link>
+                                );
                             })}
                         </div>
                     </section>

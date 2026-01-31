@@ -44,7 +44,7 @@ export default function Header() {
                     </button>
                 </div>
             </header>
-            <nav className="justify-center flex gap-8 flex-1 fixed bottom-0 bg-[#1a1a1a] w-full text-[1.4rem] p-2 md:hidden border-t-3 border-[#5E17EB]">
+            <nav className="justify-center flex gap-8 flex-1 fixed bottom-0 bg-[#1a1a1a] w-full text-[1.4rem] p-2 md:hidden border-t-3 border-[#5E17EB] py-4">
                 <Link
                     href="/"
                     className="border-b-2 border-[#5E17EB] p-1 hover:px-4 transition-all duration-400"

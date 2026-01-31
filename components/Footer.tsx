@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="text-white bg-[#1a1a1a] p-4 text-xl items-center px-6 md:pb-4 pb-20">
+        <footer className="text-white bg-[#1a1a1a] p-4 text-xl items-center px-6 md:pb-4 pb-23">
             <h2 className="text-[1.5em] text-balance font-bold mb-2">
                 Contato
             </h2>
