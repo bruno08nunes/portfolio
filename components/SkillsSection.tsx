@@ -36,10 +36,10 @@ export default function SkillsSection() {
             <h2 className="text-[1.5em] text-balance font-bold mb-2">
                 Habilidades
             </h2>
-            <div className="flex gap-4 text-[1.2em]">
+            <div className="flex gap-4 md:text-[1.2em] overflow-x-auto pb-2">
                 {skillsCategories.map((value, i) => (
                     <button
-                        className={`cursor-pointer hover:border-b-3 px-2 border-[#5E17EB] ${
+                        className={`cursor-pointer hover:border-b-3 px-2 border-[#5E17EB] text-nowrap ${
                             currentSkillCategory === i ? "border-b-3" : ""
                         }`}
                         key={i}
@@ -51,7 +51,7 @@ export default function SkillsSection() {
             </div>
             <div className="flex flex-wrap py-3 gap-4">
                 {currentSkills?.skills.map((value, i) => (
-                    <span className="border-white border-2 p-5 text-center" key={i}>
+                    <span className="border-white border-2 md:p-5 p-2 px-3 rounded text-center flex-1" key={i}>
                         {value}
                     </span>
                 ))}

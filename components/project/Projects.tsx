@@ -13,7 +13,7 @@ export default function Projects({
 }) {
     const [open, setOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
-        null
+        null,
     );
 
     const handleOpenModal = (project: ProjectType) => {
@@ -24,33 +24,45 @@ export default function Projects({
     return (
         <div className="flex justify-center flex-wrap gap-12">
             {projects.map((project, i) => (
-                    <ProjectTrigger project={{ ...project, id: i }} key={i}
-                    handleOpenModal={handleOpenModal} />
+                <ProjectTrigger
+                    project={{ ...project, id: i }}
+                    key={i}
+                    handleOpenModal={handleOpenModal}
+                />
             ))}
 
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent className="bg-[#131315] border-[#5E17EB] border-3 max-w-[650px]">
+                <DialogContent className="bg-[#131315] border-[#5E17EB] border-3 max-w-[650px] w-[90%] overflow-y-auto max-h-[90%]">
                     <DialogHeader>
-                        <DialogTitle className="mx-auto py-1 px-4 bg-[#5E17EB] text-2xl font-bold w-max rounded-sm">{selectedProject?.name}</DialogTitle>
+                        <DialogTitle className="mx-auto py-1 px-4 bg-[#5E17EB] text-2xl font-bold w-max rounded-sm">
+                            {selectedProject?.name}
+                        </DialogTitle>
                         <DialogDescription>
                             {selectedProject?.description}
                         </DialogDescription>
                     </DialogHeader>
                     <div>
                         <h2 className="text-xl font-bold mb-2">Explicação</h2>
-                        {
-                            selectedProject?.text.map((text, i) => (
-                                <p key={i} className="indent-4 my-1 text-justify">{text}</p>
-                            ))
-                        }
+                        {selectedProject?.text.map((text, i) => (
+                            <p key={i} className="indent-4 my-1 text-justify">
+                                {text}
+                            </p>
+                        ))}
                     </div>
                     <div>
                         <h2 className="text-xl font-bold mb-2">Links</h2>
-                        {
-                            selectedProject?.links.map((link, i) => (
-                                <a href={link.href} target="_blank" key={i} className="py-1 px-4 bg-[#5E17EB] text-lg rounded-sm hover:underline mr-3">{link.title}</a>
-                            ))
-                        }
+                        <div className="flex gap-3 flex-wrap">
+                            {selectedProject?.links.map((link, i) => (
+                                <a
+                                    href={link.href}
+                                    target="_blank"
+                                    key={i}
+                                    className="py-1 px-4 bg-[#5E17EB] text-lg rounded-sm hover:underline wrap-anywhere"
+                                >
+                                    {link.title}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </DialogContent>
             </Dialog>

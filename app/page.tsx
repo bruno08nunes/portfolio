@@ -36,13 +36,13 @@ export default function Home() {
     return (
         <>
             <Header />
-            <main className="min-w-[320px] w-full mx-auto flex flex-col text-xl py-8">
-                <section className="grid grid-cols-[3fr_2fr] w-full items-center gap-10 min-h-[55svh] max-w-[1300px] mx-auto px-6 py-15">
+            <main className="min-w-[320px] w-full mx-auto flex flex-col md:text-xl text-lg md:py-8">
+                <section className="md:grid grid-cols-[3fr_2fr] flex flex-col-reverse w-full items-center gap-10 min-h-[55svh] max-w-[1300px] mx-auto px-6 md:py-15 py-8">
                     <div className="flex flex-col gap-4">
-                        <h2 className="text-[1.8em] text-balance font-bold">
+                        <h2 className="md:text-[1.8em] text-2xl text-balance font-bold">
                             Transformando ideias e construindo experiências
                             através da{" "}
-                            <span className="bg-[#5E17EB] p-1">
+                            <span className="bg-[#5E17EB] md:p-1 px-1">
                                 lógica e da imaginação!
                             </span>
                         </h2>
@@ -63,7 +63,7 @@ export default function Home() {
                     <Image
                         src={profileImage}
                         alt="Ilustração estilizada representando o autor do portfólio, com óculos e barba rala, em estilo cartoon, sobre fundo roxo."
-                        className="max-w-full w-[70%] rounded-full object-cover"
+                        className="max-w-full md:w-[70%] w-[200px] rounded-full object-cover"
                         loading="eager"
                         placeholder="blur"
                     />
@@ -116,7 +116,7 @@ export default function Home() {
                             alt=""
                             width={200}
                             height={200}
-                            className="max-w-full w-[20%] rounded-full object-cover"
+                            className="max-w-full lg:w-[20%] w-[30%] rounded-full object-cover hidden sm:block"
                         />
                     </div>
                 </section>
@@ -128,11 +128,11 @@ export default function Home() {
                     {
                         education.map((course, i) => (
                             <div key={i} className="flex flex-col gap-2">
-                                <dt className="flex gap-4">
+                                <dt className="flex flex-col">
                                     <span className="font-bold">{course.course}</span>
                                     <span className="italic">{course.institution} - {course.period}</span>
                                 </dt>
-                                <dd className="flex flex-col gap-1 pl-7">
+                                <dd className="flex flex-col gap-1 pl-7 text-justify md:indent-0 indent-6">
                                     {course.description.map((description, i) => (
                                         <p key={i}>{description}</p>
                                     ))}
