@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Bruno Nunes - Portfolio",
-  description: "Portfolio do Bruno Nunes.",
+    title: "Bruno Nunes - Portfolio",
+    description: "Portfolio do Bruno Nunes.",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html>
-      <body className="text-white flex flex-col bg-[#131315]">
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="pt-br" suppressHydrationWarning>
+            <body className="text-(--text-color) flex flex-col bg-(--bg-color)" >
+                <Providers>{children}</Providers>
+            </body>
+        </html>
+    );
 }

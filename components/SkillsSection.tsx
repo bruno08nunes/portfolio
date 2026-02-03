@@ -51,7 +51,7 @@ export default function SkillsSection() {
             </div>
             <div className="flex flex-wrap py-3 gap-4">
                 {currentSkills?.skills.map((value, i) => (
-                    <span className="border-white border-2 md:p-5 p-2 px-3 rounded text-center flex-1" key={i}>
+                    <span className="border-current font-bold border-3 md:p-5 p-2 px-3 rounded text-center flex-1" key={i}>
                         {value}
                     </span>
                 ))}

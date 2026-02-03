@@ -55,7 +55,7 @@ export default async function ProjectsPage({
                                     <Link
                                         href={`?page=${value}#github-projects-h2`}
                                         key={i}
-                                        className={"border p-2 size-10 flex items-center justify-center hover:translate-y-1.5 transition-all " + (currentPage === value ? "text-black bg-[#ffffffe0]" : "")}
+                                        className={"border border-current p-2 size-10 flex items-center justify-center hover:translate-y-1.5 transition-all " + (currentPage === value ? "text-(--color-link) bg-(--bg-link) font-bold" : "")}
                                     >
                                         {value}
                                     </Link>

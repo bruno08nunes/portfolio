@@ -42,13 +42,13 @@ export default function Home() {
                         <h2 className="md:text-[1.8em] text-2xl text-balance font-bold">
                             Transformando ideias e construindo experiências
                             através da{" "}
-                            <span className="bg-[#5E17EB] md:p-1 px-1">
+                            <span className="bg-[#5E17EB] md:p-1 px-1 text-white">
                                 lógica e da imaginação!
                             </span>
                         </h2>
                         <p>
                             Olá! Eu sou{" "}
-                            <span className="text-shadow-[3px_3px_#5E17EB] text-[1.1em] text-balance">
+                            <span className="text-shadow-(--text-shadow) text-[1.1em] text-balance">
                                 &lt;Bruno Nunes&gt;
                             </span>
                             , um desenvolvedor <b>Full-Stack</b> em início de
@@ -75,13 +75,13 @@ export default function Home() {
                     <Projects projects={projects} />
                     <Link
                         href="/projetos"
-                        className="mx-auto mt-4 block w-max border-2 py-1 px-3 rounded-3xl text-xl hover:px-8 transition-all shadow-[0px_3px_10px_#5E17EB] hover:shadow-[0px_8px_17px_#5E17EB] duration-400"
+                        className="mx-auto mt-4 block w-max border-3 py-1 px-3 rounded-3xl text-xl hover:px-8 transition-all duration-400 border-current"
                     >
                         Ver Todos Os Projetos
                     </Link>
                 </section>
                 <SkillsSection />
-                <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8">
+                <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8 text-white">
                     <div className="max-w-[1300px] text-xl flex gap-8 items-center">
                         <div className="flex flex-col gap-4 text-justify">
                             <h2 className="text-[1.5em] text-balance font-bold mb-2">
@@ -106,7 +106,7 @@ export default function Home() {
                             </p>
                             <Link
                                 href="/sobre-mim"
-                                className="mx-auto mt-4 block w-max border-2 py-1 px-4 rounded-3xl text-xl hover:px-10 transition-all shadow-[0px_3px_10px_#5E17EB] hover:shadow-[0px_8px_17px_#5E17EB] duration-400"
+                                className="mx-auto mt-4 block w-max border-3 py-1 px-4 rounded-3xl text-xl hover:px-10 transition-all duration-400 border-current"
                             >
                                 Veja mais
                             </Link>

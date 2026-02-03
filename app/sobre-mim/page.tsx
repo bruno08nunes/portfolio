@@ -11,7 +11,7 @@ export default function AboutMePage() {
     return (
         <>
             <Header />
-            <main className="min-w-[320px] w-full mx-auto flex flex-col md:text-xl text-lg md:py-8">
+            <main className="min-w-[320px] w-full mx-auto flex flex-col md:text-[20px] text-lg md:py-8">
                 <section className="md:grid grid-cols-[3fr_2fr] flex flex-col-reverse w-full items-center md:gap-10 gap-4 min-h-[55svh] max-w-[1300px] mx-auto px-6 md:py-15 py-4">
                     <div className="flex flex-col gap-4">
                         <h2 className="text-[1.8em] text-balance font-bold">
@@ -19,7 +19,7 @@ export default function AboutMePage() {
                         </h2>
                         <p>
                             Olá! Eu sou{" "}
-                            <span className="text-shadow-[3px_3px_#5E17EB] text-[1.1em] text-balance">
+                            <span className="text-shadow-(--text-shadow) text-[1.1em] text-balance">
                                 &lt;Bruno Nunes&gt;
                             </span>
                             , um desenvolvedor <b>Full-Stack</b> em início de
@@ -120,8 +120,8 @@ export default function AboutMePage() {
                         placeholder="blur"
                     />
                 </section>
-                <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8">
-                    <div className="max-w-[1300px] md:text-xl flex gap-8 items-center">
+                <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8 text-white">
+                    <div className="max-w-[1300px] flex gap-8 items-center">
                         <div className="flex flex-col gap-4 text-justify">
                             <h2 className="text-[1.5em] text-balance font-bold mb-2">
                                 O que procuro

@@ -38,6 +38,15 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --purple: #5E17EB;
+  --bg-color: #dedbf1;
+  --color: black;
+  --text-shadow: none;
+  --bg-header: var(--purple);
+  --link-underline-color: currentColor;
+  --bg-link: var(--purple, #5E17EB);
+  --color-link: white;
 }
 
 @theme inline {
@@ -115,6 +124,15 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+
+  --text-color: white;
+  --bg-color: #131315;
+  --text-shadow: 3px 3px var(--purple);
+  --bg-header: #1a1a1a;
+  --link-underline-color: var(--purple);
+  --bg-link: #ffffffe0;
+  --color-link: black;
 }
 
 @layer base {

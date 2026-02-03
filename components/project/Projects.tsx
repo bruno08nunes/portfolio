@@ -32,9 +32,9 @@ export default function Projects({
             ))}
 
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent className="bg-[#131315] border-[#5E17EB] border-3 max-w-[650px] w-[90%] overflow-y-auto max-h-[90%]">
+                <DialogContent className="bg-(--bg-color) text-(--text-color) border-(--purple) border-3 max-w-[650px] w-[90%] overflow-y-auto max-h-[90%]">
                     <DialogHeader>
-                        <DialogTitle className="mx-auto py-1 px-4 bg-[#5E17EB] text-2xl font-bold w-max rounded-sm">
+                        <DialogTitle className="mx-auto py-1 px-4 bg-(--purple) text-white text-2xl font-bold w-max rounded-sm">
                             {selectedProject?.name}
                         </DialogTitle>
                         <DialogDescription>
@@ -57,7 +57,7 @@ export default function Projects({
                                     href={link.href}
                                     target="_blank"
                                     key={i}
-                                    className="py-1 px-4 bg-[#5E17EB] text-lg rounded-sm hover:underline wrap-anywhere"
+                                    className="py-1 px-4 bg-(--purple) text-lg rounded-sm hover:underline wrap-anywhere text-white"
                                 >
                                     {link.title}
                                 </a>
