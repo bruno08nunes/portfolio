@@ -10,7 +10,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { ArrowDown, ArrowDownAZ, ArrowDownCircle, ArrowDownIcon, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function LanguageToggle() {
     const svgs = {

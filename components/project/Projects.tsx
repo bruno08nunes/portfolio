@@ -44,7 +44,7 @@ export default function Projects() {
                         </DialogDescription>
                     </DialogHeader>
                     <div>
-                        <h2 className="text-xl font-bold mb-2">Explicação</h2>
+                        <h2 className="text-xl font-bold mb-2">{t("explanationDialogTitle")}</h2>
                         {selectedProject?.text.map((text, i) => (
                             <p key={i} className="indent-4 my-1 text-justify">
                                 {text}

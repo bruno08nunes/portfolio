@@ -115,9 +115,14 @@ export default async function AboutMePage() {
                                 <ul className="ml-5 list-disc">
                                     {webSkilsInfo.map((_, index) => (
                                         <li key={index}>
-                                            {t.rich(`skills.web.info.${index}`, {
-                                                b: (chunks) => <b>{chunks}</b>
-                                            })}
+                                            {t.rich(
+                                                `skills.web.info.${index}`,
+                                                {
+                                                    b: (chunks) => (
+                                                        <b>{chunks}</b>
+                                                    ),
+                                                },
+                                            )}
                                         </li>
                                     ))}
                                 </ul>
@@ -127,9 +132,14 @@ export default async function AboutMePage() {
                                 <ul className="ml-5 list-disc">
                                     {gameSkilsInfo.map((_, index) => (
                                         <li key={index}>
-                                            {t.rich(`skills.web.info.${index}`, {
-                                                b: (chunks) => <b>{chunks}</b>
-                                            })}
+                                            {t.rich(
+                                                `skills.games.info.${index}`,
+                                                {
+                                                    b: (chunks) => (
+                                                        <b>{chunks}</b>
+                                                    ),
+                                                },
+                                            )}
                                         </li>
                                     ))}
                                 </ul>
