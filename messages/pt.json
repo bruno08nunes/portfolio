@@ -1,0 +1,164 @@
+{
+    "Header": {
+        "homeLinkText": "Home",
+        "projectsLinkText": "Projetos",
+        "aboutMeLinkText": "Sobre Mim"
+    },
+    "HomePage": {
+        "headline": "Transformando ideias e construindo experiências através da <highlight>lógica e da imaginação!</highlight>",
+        "intro": "Olá! Eu sou <name></name>, um desenvolvedor <b>Full-Stack</b> em início de carreira com formação técnica pelo SENAC e <b>Game Developer</b> em formação pela Unisinos. Trabalho com foco em <b>TypeScript</b>, <b>Next.js</b>, <b>Express</b> para o desenvolvimento Web, além de <b>Unity</b> para a criação de jogos. Meu objetivo é transformar suas ideias em código!",
+        "imageAlt": "Ilustração estilizada representando o autor do portfólio, com óculos e barba rala, em estilo cartoon, sobre fundo roxo.",
+        "projectSectionTitle": "Projetos",
+        "projectSectionButton": "Ver Todos Os Projetos",
+        "aboutMeSectionTitle": "Sobre Mim",
+        "aboutMeFirstParagraph": "Eu sou Bruno Nunes, um desenvolvedor full-stack em início de carreira e game developer em formação. Sou apaixonado por transformar simples ideias em experiências digitais, desde aplicações web até mundos jogáveis.",
+        "aboutMeSecondParagraph": "Atualmente, meu foco maior está em TypeScript, Next.js, Express e Unity, tecnologias que me permitem criar projetos reais e impactantes. Esse foco começou durante minha formação técnica no SENAC, onde aprendi conceitos essenciais de frontend, backend e banco de dados. Além de ter aprofundado meus conhecimentos por conta própria.",
+        "aboutMeButton": "Veja Mais",
+        "educationSectionTitle": "Formação"
+    },
+    "Projects": {
+        "mainProjectsTitle": "Principais Projetos",
+        "githubProjectsTitle": "Todos os Repositórios do Github",
+        "info": [
+            {
+                "id": "minerva",
+                "name": "Minerva",
+                "description": "Aplicação para ensino de lógica e programação de maneira gamificada, com um sistema de lições, progresso de usuário e desafios interativos.",
+                "text": [
+                    "Esta aplicação tem como objetivo auxiliar jovens no aprendizado de lógica e programação por meio de gamificação. Ela oferece explicações claras e desafios práticos sobre os conceitos fundamentais da programação.",
+                    "A plataforma conta com autenticação de usuários, criptografia de senhas, arquitetura limpa com inversão de dependências, testes automatizados e a possibilidade de uso mesmo sem a necessidade de cadastro.",
+                    "O frontend foi desenvolvido em TypeScript para reduzir erros em tempo de desenvolvimento; Next.js, aproveitando componentes, sistema de rotas e cache; e Tailwind CSS para facilitar a criação de interfaces responsivas.",
+                    "O backend também utiliza TypeScript, com Express para simplificar a comunicação entre frontend e backend, e Prisma ORM para um gerenciamento mais eficiente e seguro do banco de dados."
+                ],
+                "tools": [
+                    "TypeScript",
+                    "Next.js",
+                    "Tailwind",
+                    "Prisma",
+                    "Express"
+                ],
+                "links": [
+                    {
+                        "href": "https://github.com/bruno08nunes/minerva-frontend",
+                        "title": "Frontend Github"
+                    },
+                    {
+                        "href": "https://github.com/bruno08nunes/minerva-backend",
+                        "title": "Backend Github"
+                    }
+                ]
+            },
+            {
+                "id": "loja-loja",
+                "name": "Loja-Loja",
+                "description": "Loja virtual com catálogo de produtos e autenticação salvos no banco de dados e  um carrinho de compras salvo no computador do usuário.",
+                "text": [
+                    "Esta é uma loja online com produtos fictícios que oferece sistema de autenticação, geração de PDF no momento da compra e um carrinho de compras persistido localmente no dispositivo do usuário.",
+                    "O frontend foi desenvolvido com HTML para a estruturação da aplicação, CSS para a estilização visual e JavaScript para implementar interações e comportamentos dinâmicos.",
+                    "O backend foi implementado em JavaScript utilizando Express para a comunicação entre cliente e servidor, além de um banco de dados relacional MySQL gerenciado com a biblioteca mysql2."
+                ],
+                "tools": ["HTML/CSS", "JavaScript", "MySQL", "Express"],
+                "links": [
+                    {
+                        "href": "https://github.com/bruno08nunes/loja-loja",
+                        "title": "Github"
+                    }
+                ]
+            },
+            {
+                "id": "pokemon",
+                "name": "Pokemon",
+                "description": "Jogo no qual o usuário precisa adivinhar qual Pokémon é pela sua silhueta.",
+                "text": [
+                    "Esta aplicação é um jogo inspirado no clássio \"Quem é esse pokemon?\", no qual apenas a silhueta de um pokemon é exibida para que o jogador tente adivinhar qual é.",
+                    "O frontend foi desenvolvido utilizando HTML, CSS e JavaScript puros. A API pública PokeAPI foi utilizada para fornecer os nomes e imagens dos pokemons, que foram transformados em silhuetas pela propriedade brightness do CSS."
+                ],
+                "tools": ["HTML/CSS", "JavaScript", "Poke API"],
+                "links": [
+                    {
+                        "href": "https://github.com/bruno08nunes/pokemon",
+                        "title": "Github"
+                    }
+                ]
+            }
+        ]
+    },
+    "Education": {
+        "info": [
+            {
+                "course": "Ensino Técnico em Informática para Web",
+                "institution": "Senac RS",
+                "period": "Fev 2023 - Dez 2025",
+                "additionalInfo": "Formação técnica integrada ao Ensino Médio",
+                "description": [
+                    "Curso com foco no desenvolvimento de aplicações web e na construção de uma base sólida em programação e tecnologia.",
+                    "Aborda o desenvolvimento de sites e aplicações web utilizando HTML, CSS e JavaScript, incluindo conceitos de design responsivo, boas práticas de estruturação e acessibilidade.",
+                    "Inclui lógica de programação, desenvolvimento backend com Node.js e Express, modelagem e uso de bancos de dados relacionais (MySQL), além de versionamento de código com Git e GitHub."
+                ]
+            },
+            {
+                "course": "Tecnólogo em Jogos Digitais",
+                "institution": "Unisinos — Campus São Leopoldo",
+                "period": "2026 - 2029",
+                "additionalInfo": "Curso superior tecnólogo na área de jogos digitais",
+                "description": [
+                    "Formação voltada ao desenvolvimento de jogos digitais, abrangendo tanto aspectos técnicos quanto criativos da área.",
+                    "Inclui fundamentos de programação para jogos, desenvolvimento de jogos 2D e 3D, uso de motores de jogo, além de conceitos de matemática, física e inteligência artificial aplicados a jogos.",
+                    "Aborda também game design, narrativa, experiência do usuário, produção de assets, trabalho em equipe multidisciplinar e práticas do mercado de jogos digitais."
+                ]
+            }
+        ]
+    },
+    "AboutMe": {
+        "hero": {
+            "title": "Quem sou eu",
+            "description": "Olá! Eu sou <name>&lt;Bruno Nunes&gt;</name>, um desenvolvedor <strong>Full-Stack</strong> em início de carreira com formação técnica pelo SENAC e <strong>Game Developer</strong> em formação pela Unisinos. Trabalho com foco em <strong>TypeScript</strong>, <strong>Next.js</strong>, <strong>Express</strong> para o desenvolvimento Web, além de <strong>Unity</strong> para a criação de jogos. Meu objetivo é transformar suas ideias em código!"
+        },
+        "journey": {
+            "title": "Começo na programação",
+            "paragraph1": "Tive meu primeiro contato com programação aos 11 anos, quando assisti ao vídeo \"<link>Os Jogos Que Eu Fiz Quando Eu Era Uma Criança</link>\". Na época, tentei aprender várias vezes, mas sempre acabava desistindo. Minha jornada na programação começou de fato por volta dos 15 anos, ao ingressar em uma escola técnica e começar a programar com mais consistência. Foi amor à segunda vista. Sempre fui fascinado por entender como as coisas funcionam \"por trás da tela\".",
+            "paragraph2": "Depois de muitas tentativas, códigos quebrando e buscas intermináveis no Google, percebi que criar software era algo que me deixava profundamente motivado. Com o tempo, essa curiosidade se transformou em um objetivo profissional. Passei a estudar HTML, CSS e JavaScript também fora da escola, criando pequenas interações e tentando reproduzir funcionalidades que via em outros sites.",
+            "paragraph3": "Ao mesmo tempo, comecei a seguir outro grande interesse: o desenvolvimento de jogos. Inicialmente como hobby, passei a criar pequenos jogos e protótipos na Unity, usando a programação como uma forma de unir lógica e criatividade. Hoje, continuo estudando diariamente para expandir meu repertório técnico e desenvolver projetos cada vez mais completos e bem estruturados."
+        },
+        "motivation": {
+            "title": "O que me motiva",
+            "paragraph1": "O que mais me empolga na programação é a sensação de transformar uma ideia em algo concreto. Seja uma aplicação, uma interface, um sistema ou um jogo, ver algo funcionando por causa de linhas que eu escrevi é uma sensação incrível.",
+            "paragraph2": "Também sou movido por desafios: gosto de entender problemas complexos e quebrá-los em partes pequenas até encontrar a solução. E por fim, acredito no poder da tecnologia para criar experiências significativas, inovadoras, úteis ou simplesmente divertidas."
+        },
+        "goals": {
+            "title": "O que procuro",
+            "paragraph1": "Busco oportunidades nas quais eu possa crescer como desenvolvedor e participar de projetos que unam criatividade, técnica e boas práticas. Gosto de ambientes em que o código é bem pensado, organizado e evolui com o tempo.",
+            "paragraph2": "Valorizo trabalhar com pessoas que gostam de construir coisas e compartilhar conhecimento. Para mim, aprender e ensinar fazem parte de um processo fundamental.",
+            "paragraph3": "Meu objetivo é criar soluções que façam diferença, seja em aplicações eficientes ou em jogos envolventes, e continuar evoluindo constantemente, um commit por vez."
+        },
+        "skills": {
+            "title": "Tecnologias e áreas de atuação",
+            "web": {
+                "title": "🌐 Web Development",
+                "info": [
+                    "<b>Frontend:</b> TypeScript, Next.js, React, Tailwind",
+                    "<b>Backend:</b> Node.js, Express",
+                    "<b>Banco de Dados:</b> MySQL",
+                    "<b>Outros:</b> APIs REST, autenticação, arquitetura básica"
+                ]
+            },
+            "games": {
+                "title": "🎮 Game Development",
+                "info": [
+                    "<b>Engine:</b> Unity",
+                    "<b>Linguagem:</b> C#",
+                    "<b>Interesses:</b> lógica de gameplay, UI de jogos, prototipação rápida"
+                ]
+            }
+        }
+    },
+    "Footer": {
+        "contactsTitle": "Contatos",
+        "resume": {
+            "label": "Currículo",
+            "linkText": "Bruno Nunes",
+            "file": "/curriculo-bruno-nunes-pt.pdf",
+            "download": "curriculo-bruno-nunes"
+        }
+    }
+}

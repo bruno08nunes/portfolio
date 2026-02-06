@@ -1,8 +1,12 @@
-export default function Footer() {
+import { getTranslations } from "next-intl/server";
+
+export default async function Footer() {
+    const t = await getTranslations("Footer");
+
     return (
         <footer className="text-white bg-(--bg-header) p-4 text-xl items-center px-6 md:pb-4 pb-23">
             <h2 className="text-[1.5em] text-balance font-bold mb-2">
-                Contato
+                {t("contactsTitle")}
             </h2>
             <ul>
                 <li>
@@ -46,13 +50,13 @@ export default function Footer() {
                     </a>
                 </li>
                 <li>
-                    Currículo:{" "}
+                    {t("resume.label")}:{" "}
                     <a
-                        href="/curriculo.pdf"
-                        download="curriculo-bruno-nunes"
+                        href={t("resume.file")}
+                        download={t("resume.download")}
                         className="underline hover:no-underline"
                     >
-                        Bruno Nunes
+                        {t("resume.linkText")}
                     </a>
                 </li>
             </ul>
