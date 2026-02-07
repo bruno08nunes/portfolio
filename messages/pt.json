@@ -41,11 +41,11 @@
                 "links": [
                     {
                         "href": "https://github.com/bruno08nunes/minerva-frontend",
-                        "title": "Frontend Github"
+                        "title": "Ver Código Frontend"
                     },
                     {
                         "href": "https://github.com/bruno08nunes/minerva-backend",
-                        "title": "Backend Github"
+                        "title": "Ver Código Backend"
                     }
                 ]
             },
@@ -62,7 +62,7 @@
                 "links": [
                     {
                         "href": "https://github.com/bruno08nunes/loja-loja",
-                        "title": "Github"
+                        "title": "Ver Código"
                     }
                 ]
             },
@@ -78,7 +78,11 @@
                 "links": [
                     {
                         "href": "https://github.com/bruno08nunes/pokemon",
-                        "title": "Github"
+                        "title": "Ver Código"
+                    },
+                    {
+                        "href": "https://bruno08nunes.github.io/pokemon",
+                        "title": "Ver Projeto"
                     }
                 ]
             }
@@ -161,5 +165,35 @@
             "file": "/curriculo-bruno-nunes-pt.pdf",
             "download": "curriculo-bruno-nunes"
         }
+    },
+    "Metadata": {
+        "home": {
+            "title": "Bruno Nunes — Fullstack & Game Developer",
+            "description": "Desenvolvedor Fullstack e Game Developer criando aplicações web modernas e experiências interativas com jogos.",
+            "ogTitle": "Bruno Nunes — Fullstack & Game Developer",
+            "ogDescription": "Aplicações web escaláveis, sistemas robustos e jogos interativos. Veja meus projetos e como eu transformo ideias em código."
+        },
+        "aboutMe": {
+            "title": "Sobre mim — Bruno Nunes",
+            "description": "Sou desenvolvedor Fullstack e Game Dev focado em criar soluções eficientes, bem arquitetadas e experiências envolventes.",
+            "ogTitle": "Sobre mim — Bruno Nunes",
+            "ogDescription": "Conheça minha trajetória como desenvolvedor Fullstack e Game Developer, minhas habilidades técnicas e minha abordagem criativa."
+        },
+        "projects": {
+            "title": "Projetos — Bruno Nunes",
+            "description": "Projetos em desenvolvimento web e games: aplicações fullstack, sistemas interativos e jogos criados com foco em qualidade e desempenho.",
+            "ogTitle": "Projetos — Bruno Nunes",
+            "ogDescription": "Explore meus projetos Fullstack e Game Dev, incluindo aplicações web, protótipos de jogos e sistemas interativos."
+        }
+    },
+    "NotFound": {
+        "title": "Página Não Encontrada :(",
+        "text": "Para continuar usando a aplicação, volte à página principal.",
+        "button": "Voltar à Página Principal"
+    },
+    "Error": {
+        "title": "Ocorreu um erro :(",
+        "text": "Para continuar usando a aplicação, volte à página principal.",
+        "button": "Resetar"
     }
 }

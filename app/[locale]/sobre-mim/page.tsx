@@ -7,6 +7,33 @@ import programingImage from "@/public/programming.png";
 import programingImage2 from "@/public/programming2.png";
 import pcImage from "@/public/pc.png";
 import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+
+type Props = {
+    params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({
+        locale,
+        namespace: "Metadata",
+    });
+
+    return {
+        title: t("aboutMe.title"),
+        description: t("aboutMe.description"),
+        openGraph: {
+            title: t("aboutMe.ogTitle"),
+            description: t("aboutMe.ogDescription"),
+            type: "website",
+        },
+        twitter: {
+            title: t("aboutMe.ogTitle"),
+            description: t("aboutMe.ogDescription"),
+        }
+    };
+}
 
 export default async function AboutMePage() {
     const t = await getTranslations("AboutMe");
