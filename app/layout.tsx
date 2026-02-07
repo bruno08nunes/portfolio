@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -28,13 +29,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const locale = (await headers()).get("x-next-intl-locale") ?? "en";
+
     return (
-        <html suppressHydrationWarning>
+        <html lang={locale} suppressHydrationWarning>
             <body className="text-(--text-color) flex flex-col bg-(--bg-color) min-h-svh">
                 {children}
             </body>

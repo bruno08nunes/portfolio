@@ -2,10 +2,12 @@
 
 import { useTheme } from "next-themes";
 import useMounted from "@/hooks/useMounted";
+import { useTranslations } from "next-intl";
 
 export function ThemeToggle() {
     const { theme, setTheme } = useTheme();
     const mounted = useMounted();
+    const t = useTranslations("Header");
 
     const svgs = {
         dark: (
@@ -42,6 +44,7 @@ export function ThemeToggle() {
     return (
         <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label={theme == "dark" ? t('switchToLight') : t('switchToDark')}
             className="cursor-pointer border-current border p-1 rounded-md hover:bg-[#ffffff66]"
         >
             {currentSvg}

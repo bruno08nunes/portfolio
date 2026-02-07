@@ -1,11 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-const skillsCategories = ["Frontend", "Backend", "Game Dev"];
 const skills = [
     {
-        category: "Frontend",
+        categoryId: "frontend",
         skills: [
             "HTML/CSS",
             "JavaScript",
@@ -16,19 +16,27 @@ const skills = [
         ],
     },
     {
-        category: "Backend",
+        categoryId: "backend",
         skills: ["TypeScript", "Node.js", "Express", "MySQL"],
     },
     {
-        category: "Game Dev",
+        categoryId: "gameDev",
         skills: ["C#", "Unity"],
+    },
+    {
+        categoryId: "tools",
+        skills: ["Git/Github", "Figma", "Docker"],
     },
 ];
 
 export default function SkillsSection() {
+    const t = useTranslations("HomePage");
+    const skillsCategoriesNames = t.raw("skillsCategoriesNames") as { categoryId: string, categoryName: string }[];
+
+    const skillsCategories = skillsCategoriesNames.map((value) => value.categoryName);
     const [currentSkillCategory, setCurrentSkillCategory] = useState(0);
     const currentSkills = skills.find(
-        (value) => value.category === skillsCategories[currentSkillCategory]
+        (value) => value.categoryId === skillsCategoriesNames[currentSkillCategory].categoryId,
     );
 
     return (
@@ -51,7 +59,10 @@ export default function SkillsSection() {
             </div>
             <div className="flex flex-wrap py-3 gap-4">
                 {currentSkills?.skills.map((value, i) => (
-                    <span className="border-current font-bold border-3 md:p-5 p-2 px-3 rounded text-center flex-1" key={i}>
+                    <span
+                        className="border-current font-bold border-3 md:p-5 p-2 px-3 rounded text-center flex-1"
+                        key={i}
+                    >
                         {value}
                     </span>
                 ))}

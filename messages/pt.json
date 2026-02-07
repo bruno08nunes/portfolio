@@ -2,16 +2,36 @@
     "Header": {
         "homeLinkText": "Home",
         "projectsLinkText": "Projetos",
-        "aboutMeLinkText": "Sobre Mim"
+        "aboutMeLinkText": "Sobre Mim",
+        "switchToDark": "Mudar para o modo escuro",
+        "switchToLight": "Mudar para o modo claro"
     },
     "HomePage": {
         "headline": "Transformando ideias em realidade e construindo experiências através da <highlight>lógica e da imaginação!</highlight>",
         "intro": "Olá! Eu sou <name></name>, um desenvolvedor <b>Full-Stack</b> em início de carreira com formação técnica pelo SENAC e <b>Game Developer</b> em formação pela Unisinos. Trabalho com foco em <b>TypeScript</b>, <b>Next.js</b>, <b>Express</b> para o desenvolvimento Web, além de <b>Unity</b> para a criação de jogos. Meu objetivo é transformar suas ideias em código!",
         "socialLinkAriaLabel": "Visite minha página no {name}",
         "emailAriaLabel": "Me envie um email",
-        "imageAlt": "Ilustração estilizada representando o autor do portfólio, com óculos e barba rala, em estilo cartoon, sobre fundo roxo.",
+        "imageAlt": "Ilustração estilizada representando o autor do portfólio.",
         "projectSectionTitle": "Projetos",
         "projectSectionButton": "Ver Todos Os Projetos",
+        "skillsCategoriesNames": [
+            {
+                "categoryId": "frontend",
+                "categoryName": "Frontend"
+            },
+            {
+                "categoryId": "backend",
+                "categoryName": "Backend"
+            },
+            {
+                "categoryId": "gameDev",
+                "categoryName": "Game Dev"
+            },
+            {
+                "categoryId": "tools",
+                "categoryName": "Ferramentas"
+            }
+        ],
         "aboutMeSectionTitle": "Sobre Mim",
         "aboutMeFirstParagraph": "Eu sou Bruno Nunes, um desenvolvedor full-stack em início de carreira e game developer em formação. Sou apaixonado por transformar simples ideias em experiências digitais, desde aplicações web até mundos jogáveis.",
         "aboutMeSecondParagraph": "Atualmente, meu foco maior está em TypeScript, Next.js, Express e Unity, tecnologias que me permitem criar projetos reais e impactantes. Esse foco começou durante minha formação técnica no SENAC, onde aprendi conceitos essenciais de frontend, backend e banco de dados. Além de ter aprofundado meus conhecimentos por conta própria.",

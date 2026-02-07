@@ -2,16 +2,36 @@
     "Header": {
         "homeLinkText": "Home",
         "projectsLinkText": "Projects",
-        "aboutMeLinkText": "About Me"
+        "aboutMeLinkText": "About Me",
+        "switchToDark": "Swith to dark mode",
+        "switchToLight": "Swith to light mode"
     },
     "HomePage": {
         "headline": "Turning ideas into reality and building experiences through <highlight>logic and imagination!</highlight>",
         "intro": "Hi! I'm <name></name>, an early-career <b>Full-Stack</b> developer with a technical degree from SENAC and a <b>Game Developer</b> in training at Unisinos. I work mainly with <b>TypeScript</b>, <b>Next.js</b>, and <b>Express</b> for web development, as well as <b>Unity</b> for game creation. My goal is to turn your ideas into code!",
         "socialLinkAriaLabel": "Visit my {name} profile",
         "emailAriaLabel": "Send me an email",
-        "imageAlt": "Stylized illustration representing the portfolio author, wearing glasses and a light beard, in a cartoon style, on a purple background.",
+        "imageAlt": "Stylized illustration representing the portfolio author.",
         "projectSectionTitle": "Projects",
         "projectSectionButton": "View All Projects",
+        "skillsCategoriesNames": [
+            {
+                "categoryId": "frontend",
+                "categoryName": "Frontend"
+            },
+            {
+                "categoryId": "backend",
+                "categoryName": "Backend"
+            },
+            {
+                "categoryId": "gameDev",
+                "categoryName": "Game Dev"
+            },
+            {
+                "categoryId": "tools",
+                "categoryName": "Tools"
+            }
+        ],
         "aboutMeSectionTitle": "About Me",
         "aboutMeFirstParagraph": "I'm Bruno Nunes, an early-career full-stack developer and a game developer in training. I'm passionate about turning simple ideas into digital experiences, from web applications to playable worlds.",
         "aboutMeSecondParagraph": "Currently, my main focus is on TypeScript, Next.js, Express, and Unity, technologies that allow me to create real and impactful projects. This focus began during my technical education at SENAC, where I learned essential frontend, backend, and database concepts, in addition to deepening my knowledge independently.",
