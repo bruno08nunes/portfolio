@@ -1,7 +1,12 @@
 "use client";
 
-import { DialogDescription } from "@radix-ui/react-dialog";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogDescription,
+} from "../ui/dialog";
 import { ProjectType } from "@/types/project";
 import { useState } from "react";
 import ProjectTrigger from "./ProjectTrigger";
@@ -39,12 +44,14 @@ export default function Projects() {
                         <DialogTitle className="mx-auto py-1 px-4 bg-(--purple) text-white text-2xl font-bold w-max rounded-sm">
                             {selectedProject?.name}
                         </DialogTitle>
-                        <DialogDescription>
+                        <DialogDescription className="text-inherit text-md">
                             {selectedProject?.description}
                         </DialogDescription>
                     </DialogHeader>
                     <div>
-                        <h2 className="text-xl font-bold mb-2">{t("explanationDialogTitle")}</h2>
+                        <h2 className="text-xl font-bold mb-2">
+                            {t("explanationDialogTitle")}
+                        </h2>
                         {selectedProject?.text.map((text, i) => (
                             <p key={i} className="indent-4 my-1 text-justify">
                                 {text}
@@ -58,6 +65,7 @@ export default function Projects() {
                                 <a
                                     href={link.href}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     key={i}
                                     className="py-1 px-4 bg-(--purple) text-lg rounded-sm hover:underline wrap-anywhere text-white"
                                 >

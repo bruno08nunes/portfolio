@@ -42,7 +42,7 @@ export function ThemeToggle() {
     return (
         <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="cursor-pointer border-current border p-1 rounded-md"
+            className="cursor-pointer border-current border p-1 rounded-md hover:bg-[#ffffff66]"
         >
             {currentSvg}
         </button>

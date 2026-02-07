@@ -86,6 +86,7 @@ export default async function AboutMePage() {
                                     <a
                                         href="https://www.youtube.com/watch?v=Sd56qiZq2-g"
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                         className="underline underline-offset-3 hover:decoration-[#5E17EB]"
                                     >
                                         {chunks}

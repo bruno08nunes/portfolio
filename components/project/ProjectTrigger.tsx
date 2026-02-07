@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function ProjectTrigger({ project, handleOpenModal }: { project: ProjectType, handleOpenModal(project: ProjectType): void }) {
     return (
-        <div
-            className="flex-1 max-w-[400px] border-(--purple) rounded-md border-4 overflow-hidden hover:scale-105 hover:translate-y-[-19px] transition-transform duration-400 cursor-pointer basis-[280px] bg-(--bg-color)"
+        <button
+            className="flex-1 max-w-[400px] border-(--purple) rounded-md border-4 overflow-hidden hover:scale-105 hover:translate-y-[-19px] transition-transform duration-400 cursor-pointer basis-[280px] bg-(--bg-color) flex flex-col"
             onClick={() => handleOpenModal(project)}
         >
             <Image
@@ -30,6 +30,6 @@ export default function ProjectTrigger({ project, handleOpenModal }: { project: 
                     ))}
                 </div>
             </div>
-        </div>
+        </button>
     );
 }

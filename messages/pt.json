@@ -7,6 +7,8 @@
     "HomePage": {
         "headline": "Transformando ideias em realidade e construindo experiências através da <highlight>lógica e da imaginação!</highlight>",
         "intro": "Olá! Eu sou <name></name>, um desenvolvedor <b>Full-Stack</b> em início de carreira com formação técnica pelo SENAC e <b>Game Developer</b> em formação pela Unisinos. Trabalho com foco em <b>TypeScript</b>, <b>Next.js</b>, <b>Express</b> para o desenvolvimento Web, além de <b>Unity</b> para a criação de jogos. Meu objetivo é transformar suas ideias em código!",
+        "socialLinkAriaLabel": "Visite minha página no {name}",
+        "emailAriaLabel": "Me envie um email",
         "imageAlt": "Ilustração estilizada representando o autor do portfólio, com óculos e barba rala, em estilo cartoon, sobre fundo roxo.",
         "projectSectionTitle": "Projetos",
         "projectSectionButton": "Ver Todos Os Projetos",

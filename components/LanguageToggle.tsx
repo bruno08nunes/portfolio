@@ -2,8 +2,8 @@
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
-import LanguageSVGPT from "./LanguageSVGPT";
-import LanguageSVGEN from "./LanguageSVGEN";
+import LanguageSVGPT from "./icons/LanguageSVGPT";
+import LanguageSVGEN from "./icons/LanguageSVGEN";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -29,7 +29,7 @@ export default function LanguageToggle() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger>
-                <div className="flex gap-2 items-center border-current border py-1 px-2 rounded-md">
+                <div className="flex gap-2 items-center border-current border py-1 px-2 rounded-md cursor-pointer hover:bg-[#ffffff66]">
                     <span className="max-w-6 rounded-full overflow-hidden">
                         {Object.hasOwn(svgs, locale) ? svgs[locale] : svgs.pt}
                     </span>

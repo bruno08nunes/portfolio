@@ -13,7 +13,6 @@ export default async function Footer() {
                     Email:{" "}
                     <a
                         href="mailto:brunonunes.sl08@gmail.com"
-                        target="_blank"
                         className="underline hover:no-underline"
                     >
                         brunonunes.sl08@gmail.com
@@ -24,6 +23,7 @@ export default async function Footer() {
                     <a
                         href="https://www.linkedin.com/in/bruno08nunes/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="underline hover:no-underline"
                     >
                         bruno08nunes
@@ -34,6 +34,7 @@ export default async function Footer() {
                     <a
                         href="https://github.com/bruno08nunes"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="underline hover:no-underline"
                     >
                         bruno08nunes
@@ -44,6 +45,7 @@ export default async function Footer() {
                     <a
                         href="https://bruno08nunes.itch.io/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="underline hover:no-underline"
                     >
                         bruno08nunes

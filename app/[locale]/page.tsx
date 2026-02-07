@@ -7,6 +7,10 @@ import profileImage from "@/public/purple-picture.jpeg";
 import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 import EducationList from "@/components/EducationList";
+import EmailIcon from "@/components/icons/EmailIcon";
+import GithubIcon from "@/components/icons/GithubIcon";
+import LinkedinIcon from "@/components/icons/LinkedinIcon";
+import ItchIoIcon from "@/components/icons/ItchIoIcon";
 
 export default async function Home() {
     const t = await getTranslations("HomePage");
@@ -26,16 +30,58 @@ export default async function Home() {
                                 ),
                             })}
                         </h2>
-                        <p>
-                            {t.rich("intro", {
-                                name: () => (
-                                    <span className="text-shadow-(--text-shadow) text-[1.1em] text-balance">
-                                        &lt;Bruno Nunes&gt;
-                                    </span>
-                                ),
-                                b: (chunks) => <b>{chunks}</b>,
-                            })}
-                        </p>
+                        <div>
+                            <p>
+                                {t.rich("intro", {
+                                    name: () => (
+                                        <span className="text-shadow-(--text-shadow) text-[1.1em] text-balance">
+                                            &lt;Bruno Nunes&gt;
+                                        </span>
+                                    ),
+                                    b: (chunks) => <b>{chunks}</b>,
+                                })}
+                            </p>
+                            <div className="flex justify-center gap-4 pt-4">
+                                <a
+                                    href="mailto:brunonunes.sl08@gmail.com"
+                                    aria-label={t("emailAriaLabel")}
+                                    className="p-2 border-3 border-current rounded-full hover:scale-115 transition-transform"
+                                    title="Email"
+                                >
+                                    <EmailIcon />
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/bruno08nunes/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={t("socialLinkAriaLabel", {name: "Linkedin"})}
+                                    className="p-2 border-3 border-current rounded-full hover:scale-115 transition-transform"
+                                    title="Linkedin"
+                                >
+                                    <LinkedinIcon />
+                                </a>
+                                <a
+                                    href="https://github.com/bruno08nunes"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={t("socialLinkAriaLabel", {name: "Github"})}
+                                    className="p-2 border-3 border-current rounded-full hover:scale-115 transition-transform"
+                                    title="Github"
+                                >
+                                    <GithubIcon />
+                                </a>
+                                <a
+                                    href="https://bruno08nunes.itch.io/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={t("socialLinkAriaLabel", {name: "Itch.io"})}
+                                    className="p-2 border-3 border-current rounded-full hover:scale-115 transition-transform"
+                                    title="Itch.io"
+                                >
+                                    <ItchIoIcon />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <Image
                         src={profileImage}
