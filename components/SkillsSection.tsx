@@ -47,7 +47,7 @@ export default function SkillsSection() {
             <div className="flex gap-4 md:text-[1.2em] overflow-x-auto pb-2">
                 {skillsCategories.map((value, i) => (
                     <button
-                        className={`cursor-pointer hover:border-b-3 px-2 border-[#5E17EB] text-nowrap ${
+                        className={`cursor-pointer hover:border-b-3 px-2 border-(--purple) text-nowrap ${
                             currentSkillCategory === i ? "border-b-3" : ""
                         }`}
                         key={i}

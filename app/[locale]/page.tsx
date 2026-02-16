@@ -3,7 +3,6 @@ import Link from "next/link";
 import SkillsSection from "../../components/SkillsSection";
 import Projects from "@/components/project/Projects";
 import Header from "@/components/Header";
-import profileImage from "@/public/purple-picture.jpeg";
 import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 import EducationList from "@/components/EducationList";
@@ -11,6 +10,8 @@ import EmailIcon from "@/components/icons/EmailIcon";
 import GithubIcon from "@/components/icons/GithubIcon";
 import LinkedinIcon from "@/components/icons/LinkedinIcon";
 import ItchIoIcon from "@/components/icons/ItchIoIcon";
+
+import profileImage from "@/public/picture.png";
 
 export default async function Home() {
     const t = await getTranslations("HomePage");
@@ -24,7 +25,7 @@ export default async function Home() {
                         <h2 className="md:text-[1.8em] text-2xl text-balance font-bold">
                             {t.rich("headline", {
                                 highlight: (chunks) => (
-                                    <span className="bg-[#5E17EB] md:p-1 px-1 text-white">
+                                    <span className="bg-(--purple) md:p-1 px-1 text-white">
                                         {chunks}
                                     </span>
                                 ),
@@ -54,7 +55,9 @@ export default async function Home() {
                                     href="https://www.linkedin.com/in/bruno08nunes/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label={t("socialLinkAriaLabel", {name: "Linkedin"})}
+                                    aria-label={t("socialLinkAriaLabel", {
+                                        name: "Linkedin",
+                                    })}
                                     className="p-2 border-3 border-current rounded-full hover:scale-115 transition-transform"
                                     title="Linkedin"
                                 >
@@ -64,7 +67,9 @@ export default async function Home() {
                                     href="https://github.com/bruno08nunes"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label={t("socialLinkAriaLabel", {name: "Github"})}
+                                    aria-label={t("socialLinkAriaLabel", {
+                                        name: "Github",
+                                    })}
                                     className="p-2 border-3 border-current rounded-full hover:scale-115 transition-transform"
                                     title="Github"
                                 >
@@ -74,7 +79,9 @@ export default async function Home() {
                                     href="https://bruno08nunes.itch.io/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label={t("socialLinkAriaLabel", {name: "Itch.io"})}
+                                    aria-label={t("socialLinkAriaLabel", {
+                                        name: "Itch.io",
+                                    })}
                                     className="p-2 border-3 border-current rounded-full hover:scale-115 transition-transform"
                                     title="Itch.io"
                                 >
@@ -83,13 +90,15 @@ export default async function Home() {
                             </div>
                         </div>
                     </div>
-                    <Image
-                        src={profileImage}
-                        alt={t("imageAlt")}
-                        className="max-w-full md:w-[70%] w-[200px] rounded-full object-cover"
-                        loading="eager"
-                        placeholder="blur"
-                    />
+                    <div className="max-w-full md:w-[70%] w-[200px] rounded-full bg-(--purple) overflow-hidden flex justify-center items-center">
+                        <Image
+                            src={profileImage}
+                            alt={t("imageAlt")}
+                            className="w-full object-contain aspect-square object-[60%] pt-1"
+                            loading="eager"
+                            placeholder="blur"
+                        />
+                    </div>
                 </section>
                 <section className="max-w-[1300px] mx-auto w-full px-6">
                     <h2 className="text-[1.5em] text-balance font-bold mb-2">
@@ -104,7 +113,7 @@ export default async function Home() {
                     </Link>
                 </section>
                 <SkillsSection />
-                <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8 text-white">
+                <section className="bg-(--purple) w-full min-h-[50vh] flex justify-center p-8 text-white">
                     <div className="max-w-[1300px] text-xl flex gap-8 items-center">
                         <div className="flex flex-col gap-4 text-justify">
                             <h2 className="text-[1.5em] text-balance font-bold mb-2">

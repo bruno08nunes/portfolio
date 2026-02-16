@@ -87,7 +87,7 @@ export default async function AboutMePage() {
                                         href="https://www.youtube.com/watch?v=Sd56qiZq2-g"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="underline underline-offset-3 hover:decoration-[#5E17EB]"
+                                        className="underline underline-offset-3 hover:decoration-(--purple)"
                                     >
                                         {chunks}
                                     </a>
@@ -113,7 +113,7 @@ export default async function AboutMePage() {
                         placeholder="blur"
                     />
                 </section>
-                <section className="bg-[#5E17EB] w-full min-h-[50vh] flex justify-center p-8 text-white">
+                <section className="bg-(--purple) w-full min-h-[50vh] flex justify-center p-8 text-white">
                     <div className="max-w-[1300px] flex gap-8 items-center">
                         <div className="flex flex-col gap-4 text-justify">
                             <h2 className="text-[1.5em] text-balance font-bold mb-2">
