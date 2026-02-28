@@ -3,13 +3,25 @@ import { ThemeToggle } from "./ThemeToggle";
 import { getTranslations } from "next-intl/server";
 import LanguageToggle from "./LanguageToggle";
 
+import logo from "@/public/logo.png";
+import Image from "next/image";
+
 export default async function Header() {
     const t = await getTranslations("Header");
 
     return (
         <>
-            <header className="text-white bg-(--bg-header) p-4 flex flex-row text-2xl max-[380px]:text-lg items-center gap-4 justify-between">
-                <h1 className="md:basis-40">Bruno Nunes</h1>
+            <header className="text-white bg-(--bg-header) p-4 py-5 flex flex-row text-2xl max-[380px]:text-lg items-center gap-4 justify-between">
+                <Link href="/" className="md:basis-40">
+                    <Image
+                        src={logo}
+                        alt=""
+                        placeholder="blur"
+                        className="max-w-[110px]"
+                        width={625}
+                        height={440}
+                    />
+                </Link>
                 <nav className="justify-center md:flex gap-2 flex-1 hidden">
                     <Link
                         href="/"

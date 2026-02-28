@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import ideaImage from "@/public/idea.png";
-import programingImage from "@/public/programming.png";
-import programingImage2 from "@/public/programming2.png";
+import programingImage from "@/public/way.png";
+import programingImage2 from "@/public/programming.png";
 import pcImage from "@/public/pc.png";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
@@ -73,7 +73,7 @@ export default async function AboutMePage() {
                     <Image
                         src={programingImage}
                         alt=""
-                        className="max-w-full lg:full w-[300px] md:max-lg:hidden rounded-full object-cover"
+                        className="max-w-full lg:full w-[300px] md:max-lg:hidden object-cover"
                         placeholder="blur"
                     />
                     <div className="flex flex-col gap-4">
@@ -128,7 +128,7 @@ export default async function AboutMePage() {
                             alt=""
                             width={200}
                             height={200}
-                            className="max-w-full w-[60%] rounded-full object-cover hidden sm:block"
+                            className="max-w-full w-[40%] object-cover hidden sm:block"
                         />
                     </div>
                 </section>
@@ -177,7 +177,7 @@ export default async function AboutMePage() {
                     <Image
                         src={pcImage}
                         alt=""
-                        className="max-w-full w-[70%] rounded-full object-cover hidden md:block"
+                        className="max-w-full w-[75%] object-cover hidden md:block"
                         placeholder="blur"
                     />
                 </section>
