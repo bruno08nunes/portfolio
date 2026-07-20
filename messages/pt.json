@@ -40,9 +40,53 @@
     },
     "Projects": {
         "mainProjectsTitle": "Principais Projetos",
+        "webProjectsTitle": "Projetos Web (Frontend e Backend)",
+        "gameProjectsTitle": "Jogos",
         "githubProjectsTitle": "Todos os Repositórios do Github",
         "explanationDialogTitle": "Explicação",
         "info": [
+            {
+                "id": "vampirehunter",
+                "name": "Vampire Hunter",
+                "description": "Jogo FPS desenvolvido na Unity utilizando C#. Possui um sistema de armas (pistola, metralhadora, shotgun e espada), IA de inimigos, sistema de vida, interface, animações, gerenciamento de cenas e física da Unity.",
+                "text": [
+                    "Este jogo é um FPS em que hordas de inimigo perseguem o jogador, que deve eliminá-las uma a uma. Ele pode se beneficiar de diversos tipos de armas para isso.",
+                    "O jogo foi desenvolvido inteiramente na Unity utilizando a linguagem C#. Ele utiliza sistemas de animações, física 3D, ragdoll, Input System, sistemas de UI responsivos e a IA de navegação da Unity."
+                ],
+                "tools": ["Unity", "C#", "Blender", "Mixamo"],
+                "links": [
+                    {
+                        "href": "https://github.com/bruno08nunes/vampire-hunter",
+                        "title": "Ver Código"
+                    },
+                    {
+                        "href": "https://bruno08nunes.itch.io/vampire-hunter",
+                        "title": "Ver Projeto"
+                    }
+                ],
+                "isMain": true,
+                "type": "game"
+            },
+            {
+                "id": "generoll",
+                "name": "Generoll",
+                "description": "Jogo de dados inspirado em General desenvolvido na Unity com C#. Ele possui itens que dão bônus ao jogador.",
+                "text": [
+                    "Jogo de dados inspirado em General desenvolvido na Unity com C#. Ele possui itens que dão bônus ao jogador. O jogo roda diretamente no browser através de WebGL."
+                ],
+                "tools": ["Unity", "C#"],
+                "links": [
+                    {
+                        "href": "https://github.com/bruno08nunes/generoll",
+                        "title": "Ver Código"
+                    },
+                    {
+                        "href": "https://bruno08nunes.itch.io/generoll",
+                        "title": "Ver Projeto"
+                    }
+                ],
+                "type": "game"
+            },
             {
                 "id": "minerva",
                 "name": "Minerva",
@@ -69,7 +113,9 @@
                         "href": "https://github.com/bruno08nunes/minerva-backend",
                         "title": "Ver Código Backend"
                     }
-                ]
+                ],
+                "isMain": true,
+                "type": "web"
             },
             {
                 "id": "loja-loja",
@@ -86,7 +132,9 @@
                         "href": "https://github.com/bruno08nunes/loja-loja",
                         "title": "Ver Código"
                     }
-                ]
+                ],
+                "isMain": true,
+                "type": "web"
             },
             {
                 "id": "pokemon",
@@ -106,7 +154,8 @@
                         "href": "https://bruno08nunes.github.io/pokemon",
                         "title": "Ver Projeto"
                     }
-                ]
+                ],
+                "type": "web"
             }
         ]
     },

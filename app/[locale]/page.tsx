@@ -104,7 +104,7 @@ export default async function Home() {
                     <h2 className="text-[1.5em] text-balance font-bold mb-2">
                         {t("projectSectionTitle")}
                     </h2>
-                    <Projects />
+                    <Projects filter="main" />
                     <Link
                         href="/projetos"
                         className="mx-auto mt-4 block w-max border-3 py-1 px-3 rounded-3xl text-xl hover:px-8 transition-all duration-400 border-current"

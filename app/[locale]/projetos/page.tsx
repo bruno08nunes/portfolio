@@ -58,9 +58,15 @@ export default async function ProjectsPage({
             <main className="min-w-[320px] w-full mx-auto flex flex-col text-xl py-8 gap-6">
                 <section className="max-w-[1300px] mx-auto w-full px-6">
                     <h2 className="text-[1.5em] text-balance font-bold mb-2">
-                        {t("mainProjectsTitle")}
+                        {t("gameProjectsTitle")}
                     </h2>
-                    <Projects />
+                    <Projects filter="game" />
+                </section>
+                <section className="max-w-[1300px] mx-auto w-full px-6">
+                    <h2 className="text-[1.5em] text-balance font-bold mb-2">
+                        {t("webProjectsTitle")}
+                    </h2>
+                    <Projects filter="web" />
                 </section>
                 {okReq !== false && repos !== undefined && (
                     <section className="max-w-[1300px] mx-auto w-full px-6">

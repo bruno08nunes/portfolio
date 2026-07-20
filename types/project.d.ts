@@ -5,6 +5,8 @@ export type ProjectType = {
     tools: string[];
     text: string[];
     links: { href: string; title: string }[];
+    isMain?: boolean;
+    type: "web" | "game"
 };
 
 export type GithubProjectType = {

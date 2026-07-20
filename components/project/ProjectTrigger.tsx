@@ -8,7 +8,7 @@ export default function ProjectTrigger({ project, handleOpenModal }: { project: 
             onClick={() => handleOpenModal(project)}
         >
             <Image
-                src={`/${project.name.toLowerCase()}.png`}
+                src={`/${typeof project.id === "number" ? project.name.toLocaleLowerCase() : project.id.toLowerCase()}.png`}
                 alt=""
                 width={800}
                 height={800}

@@ -12,14 +12,28 @@ import { useState } from "react";
 import ProjectTrigger from "./ProjectTrigger";
 import { useTranslations } from "next-intl";
 
-export default function Projects() {
+const filterCallbacks = {
+    main: (({isMain}: ProjectType) => !!isMain),
+    web: (({type}: ProjectType) => type === "web"),
+    game: (({type}: ProjectType)  => type === "game"),
+}
+
+export default function Projects({
+    filter,
+}: {
+    filter?: keyof typeof filterCallbacks;
+}) {
     const [open, setOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
         null,
     );
 
     const t = useTranslations("Projects");
-    const projectsData = t.raw("info") as ProjectType[];
+    let projectsData = t.raw("info") as ProjectType[];
+
+    if (filter) {
+        projectsData = projectsData.filter(filterCallbacks[filter]);
+    }
 
     const handleOpenModal = (project: ProjectType) => {
         setOpen(true);

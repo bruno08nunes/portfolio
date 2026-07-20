@@ -40,9 +40,53 @@
     },
     "Projects": {
         "mainProjectsTitle": "Main Projects",
+        "webProjectsTitle": "Web Projects (Frontend & Backend)",
+        "gameProjectsTitle": "Games",
         "githubProjectsTitle": "All GitHub Repositories",
         "explanationDialogTitle": "Explanation",
         "info": [
+            {
+                "id": "vampirehunter",
+                "name": "Vampire Hunter",
+                "description": "A first-person shooter developed in Unity using C#. It features a weapon system (pistol, assault rifle, shotgun, and sword), enemy AI, a health system, UI, animations, scene management, and Unity physics.",
+                "text": [
+                    "This is a first-person shooter where hordes of enemies chase the player, who must eliminate them one by one using different types of weapons.",
+                    "The game was developed entirely in Unity using C#. It makes use of Unity's animation system, 3D physics, ragdolls, the Input System, responsive UI systems, and NavMesh AI."
+                ],
+                "tools": ["Unity", "C#", "Blender", "Mixamo"],
+                "links": [
+                    {
+                        "href": "https://github.com/bruno08nunes/vampire-hunter",
+                        "title": "Code"
+                    },
+                    {
+                        "href": "https://bruno08nunes.itch.io/vampire-hunter",
+                        "title": "Project"
+                    }
+                ],
+                "isMain": true,
+                "type": "game"
+            },
+            {
+                "id": "generoll",
+                "name": "Generoll",
+                "description": "A dice game inspired by Yahtzee, developed in Unity with C#. It includes collectible items that grant bonuses to the player.",
+                "text": [
+                    "A dice game inspired by Yahtzee, developed in Unity with C#. It features collectible items that grant bonuses to the player. The game runs directly in the browser using WebGL."
+                ],
+                "tools": ["Unity", "C#"],
+                "links": [
+                    {
+                        "href": "https://github.com/bruno08nunes/generoll",
+                        "title": "Code"
+                    },
+                    {
+                        "href": "https://bruno08nunes.itch.io/generoll",
+                        "title": "Project"
+                    }
+                ],
+                "type": "game"
+            },
             {
                 "id": "minerva",
                 "name": "Minerva",
@@ -69,7 +113,9 @@
                         "href": "https://github.com/bruno08nunes/minerva-backend",
                         "title": "Backend Code"
                     }
-                ]
+                ],
+                "isMain": true,
+                "type": "web"
             },
             {
                 "id": "loja-loja",
@@ -86,15 +132,17 @@
                         "href": "https://github.com/bruno08nunes/loja-loja",
                         "title": "Code"
                     }
-                ]
+                ],
+                "isMain": true,
+                "type": "web"
             },
             {
                 "id": "pokemon",
                 "name": "Pokemon",
                 "description": "A game in which the user must guess which Pokémon it is based on its silhouette.",
                 "text": [
-                    "This application is a game inspired by the classic \"Who's That Pokémon?\", where only the silhouette of a Pokémon is shown and the player must try to guess which one it is.",
-                    "The frontend was developed using pure HTML, CSS, and JavaScript. The public PokeAPI was used to provide Pokémon names and images, which were transformed into silhouettes using the CSS brightness property."
+                    "This application is inspired by the classic \"Who's That Pokémon?\" game, where only a Pokémon's silhouette is shown and the player must guess which one it is.",
+                    "The frontend was developed using pure HTML, CSS, and JavaScript. The public PokeAPI provides Pokémon names and images, which are transformed into silhouettes using the CSS brightness property."
                 ],
                 "tools": ["HTML/CSS", "JavaScript", "Poke API"],
                 "links": [
@@ -106,7 +154,8 @@
                         "href": "https://bruno08nunes.github.io/pokemon",
                         "title": "Project"
                     }
-                ]
+                ],
+                "type": "web"
             }
         ]
     },
