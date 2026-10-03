@@ -112,6 +112,10 @@
                     {
                         "href": "https://github.com/bruno08nunes/minerva-backend",
                         "title": "Backend Code"
+                    },
+                    {
+                        "href": "https://minervapp.vercel.app/",
+                        "title": "Project"
                     }
                 ],
                 "isMain": true,
@@ -175,7 +179,7 @@
             {
                 "course": "Technologist Degree in Digital Games",
                 "institution": "Unisinos — São Leopoldo Campus",
-                "period": "2026 - 2029",
+                "period": "2026 - 2028",
                 "additionalInfo": "Undergraduate technologist degree in the digital games field",
                 "description": [
                     "A program focused on digital game development, covering both technical and creative aspects of the field.",

@@ -112,6 +112,10 @@
                     {
                         "href": "https://github.com/bruno08nunes/minerva-backend",
                         "title": "Ver Código Backend"
+                    },
+                    {
+                        "href": "https://minervapp.vercel.app/",
+                        "title": "Ver Projeto"
                     }
                 ],
                 "isMain": true,
@@ -175,7 +179,7 @@
             {
                 "course": "Tecnólogo em Jogos Digitais",
                 "institution": "Unisinos — Campus São Leopoldo",
-                "period": "2026 - 2029",
+                "period": "2026 - 2028",
                 "additionalInfo": "Curso superior tecnólogo na área de jogos digitais",
                 "description": [
                     "Formação voltada ao desenvolvimento de jogos digitais, abrangendo tanto aspectos técnicos quanto criativos da área.",
